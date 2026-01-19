@@ -12,12 +12,15 @@ Xc= Matrice_data - mean(Matrice_data);
 %standardisation
 Xs = Xc ./ std(Xc);
 
-%calcul de M (matrice de covariance) =Xt*X/n-1
+%calcul de M (matrice de variance-covariance) =Xt*X/n-1
 n = size(Xs,1);
 M = (Xs' * Xs)/(n-1);
 
-% Diagonalisation de V : E= matrice des vecteurs propres et D matirce des valeurs propres
+% Diagonalisation de m : E= matrice des vecteurs propres et D matirce des valeurs propres
 
-[E, D] = eig(M);
+[E,D] = eig(M);
+% tri des valeurs propres par ordre decroissant en utilisant sort
+sort(diag(D),'descend')
 
-
+% à l'aide de ces outils effectuer l'ACP
+%reste à faire les questions à l'aerrière de la page
