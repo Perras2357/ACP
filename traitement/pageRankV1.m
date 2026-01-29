@@ -86,3 +86,6 @@ for j = 1:N
   end
 end
 
+% construction de la matrice de google
+M = d * M_transition + (1-d) * 1/N
+
