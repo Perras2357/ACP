@@ -1,3 +1,4 @@
+data/*
 !data/.gitkeep
 PageRank/data/*
 !PageRank/data/.gitkeep
